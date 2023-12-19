@@ -1,0 +1,26 @@
+$primaryColor:purple;
+
+@mixin selectionButton {
+    height: 50px;
+    width: 230px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #F6F6F6;
+}
+
+body{
+    background-color: red;
+
+}
+header {
+    padding: 50px;
+    background-color:$primaryColor;
+    .button {
+        @include selectionButton();
+    }
+}
+footer{
+    margin-top: 500px;
+    padding: 50px;
+    background-color: $primaryColor;
+}

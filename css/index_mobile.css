@@ -1,0 +1,19 @@
+body {
+  background-color: red; }
+
+header {
+  padding: 50px;
+  background-color: purple; }
+  header .button {
+    height: 50px;
+    width: 230px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #F6F6F6; }
+
+footer {
+  margin-top: 500px;
+  padding: 50px;
+  background-color: purple; }
+
+/*# sourceMappingURL=index_mobile.css.map */
