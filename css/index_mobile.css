@@ -1,19 +1,170 @@
-body {
-  background-color: red; }
+@charset "UTF-8";
+@media (min-width: 320px) {
+  /* Définition des variables */
+  /*Définition des mixins*/
+  h1 h2 h3 {
+    font-family: 'Shrikhand', serif;
+    margin: 0; }
 
-header {
-  padding: 50px;
-  background-color: purple; }
-  header .button {
-    height: 50px;
-    width: 230px;
-    border: none;
-    border-radius: 10px 10px 10px 10px;
-    background-color: #F6F6F6; }
+  h2 {
+    padding-left: 5%; }
 
-footer {
-  margin-top: 500px;
-  padding: 50px;
-  background-color: purple; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F6F6;
+    margin: 0; }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    header .header-logo {
+      height: 30px;
+      width: 100%;
+      padding: 6px 0px 6px 0px;
+      object-fit: contain;
+      box-shadow: 0px 3px 2px #7E7E7E36;
+      z-index: 1;
+      background-color: #FFFFFF; }
+    header .header-location {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      background-color: #EAEAEA; }
+
+  .header-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #F6F6F6;
+    height: 280px;
+    width: 80%; }
+    .header-description .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 250px;
+      border: none;
+      border-radius: 10px 10px 10px 10px;
+      border-bottom: 30px;
+      position: relative;
+      height: 40px;
+      width: 180px;
+      box-shadow: 1px 1px 9px #7E7E7E;
+      border-radius: 20px 20px 20px 20px;
+      background-color: #686868;
+      background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+      color: #FFFFFF; }
+
+  nav {
+    background-color: #FFFFFF;
+    box-shadow: 0px 7px 4px #7E7E7E36; }
+
+  .nav-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 280px;
+    width: 100%;
+    z-index: 1;
+    padding-bottom: 30px; }
+    .nav-options .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 250px;
+      border: none;
+      border-radius: 10px 10px 10px 10px;
+      border-bottom: 30px;
+      position: relative;
+      box-shadow: 2px 4px 10px #7E7E7E; }
+      .nav-options .btn .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9356DC;
+        height: 24px;
+        width: 24px;
+        border-radius: 100px;
+        color: #FFFFFF;
+        z-index: 1;
+        position: absolute;
+        left: -13px; }
+      .nav-options .btn .icone {
+        margin-right: 15px; }
+    .nav-options .icone :hover {
+      color: #9356DC; }
+
+  .restaurant {
+    display: flex;
+    flex-direction: column; }
+
+  .restaurant-org {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .restaurant-org a {
+      text-decoration: none; }
+      .restaurant-org a .card {
+        height: 280px;
+        position: relative;
+        margin: 0px 15px 0px 15px; }
+        .restaurant-org a .card .card-badge {
+          background-color: #99e2d0;
+          color: #1b6150;
+          padding: 8px;
+          border-radius: 2px;
+          position: absolute;
+          top: 16px;
+          right: 12px; }
+        .restaurant-org a .card .upside-block img {
+          width: 100%;
+          height: 161px;
+          border-radius: 20px 20px 0px 0px;
+          object-fit: cover; }
+        .restaurant-org a .card .downside-block {
+          display: flex;
+          align-items: center;
+          height: 80px;
+          padding-left: 10px;
+          border-radius: 0px 0px 20px 20px;
+          background-color: white; }
+          .restaurant-org a .card .downside-block .card-footer {
+            width: 80%; }
+            .restaurant-org a .card .downside-block .card-footer h3, .restaurant-org a .card .downside-block .card-footer p {
+              margin: 0;
+              margin-bottom: 5px;
+              color: black; }
+          .restaurant-org a .card .downside-block .heart {
+            font-size: 1.5em;
+            color: black; }
+
+  footer {
+    background-color: #353535; }
+    footer .footer-title {
+      color: #FFFFFF;
+      font-family: 'Shrikhand', serif;
+      padding: 15px 0px 0px 15px; }
+    footer .footer-org {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100px;
+      background-color: #353535;
+      color: white;
+      padding-left: 10px;
+      margin-top: -16px;
+      font-size: 0.8em;
+      padding: 10px 0px 15px 15px; }
+      footer .footer-org a {
+        color: #FFFFFF;
+        text-decoration: none; } }
 
 /*# sourceMappingURL=index_mobile.css.map */
