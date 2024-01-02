@@ -1,2 +1,231 @@
 @media (min-width: 767px) {
-}
+    /* Définition des variables */
+    $backgroundGrey:#F6F6F6;
+    $functionningPurple:#9356DC;
+    $footerDarkGrey:#353535;
+    $badgeGreenLight:#99E2D0;
+    $badgeGreenDark: #008766;
+    $colorWhite:#FFFFFF;
+    
+    /*Définition des mixins*/
+    @mixin standardButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 250px;
+        border: none;
+        border-radius: 10px 10px 10px 10px;
+        border-bottom: 30px;
+        position: relative;
+    }
+    @mixin buttonShadow {
+        box-shadow: 2px 4px 10px #7E7E7E;
+    }
+    @mixin purpleButton {
+        height: 40px;
+        width: 180px;
+        box-shadow: 1px 1px 9px #7E7E7E;
+        border-radius: 20px 20px 20px 20px ;
+        background-color: #686868;
+        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        color: $colorWhite;
+    }
+    @mixin numberPosition {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $functionningPurple;
+        height: 24px;
+        width: 24px;
+        border-radius: 100px;
+        color: $colorWhite;
+        z-index: 1 ;
+        position: absolute;
+        left: -13px;
+    }
+    @mixin cardRestaurant {
+        height:280px;
+        position: relative;
+        margin: 0px 15px 0px 15px;
+    }
+    
+    
+    h1 h2 h3 {
+        font-family: 'Shrikhand', serif;
+        margin: 0;
+    }
+    h2 { 
+        margin: 0;
+        padding: 2% 0% 2% 9%;; 
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: $backgroundGrey;
+        margin:0
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .header-logo {
+            height: 30px;
+            width: 100%;
+            padding: 6px 0px 6px 0px ;
+            object-fit: contain;
+            box-shadow:0px 3px 2px #7E7E7E36 ; 
+            z-index: 1; 
+            background-color: $colorWhite;
+        }
+        .header-location {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            background-color:#EAEAEA;
+            }
+        }
+        .header-description {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            background-color: #F6F6F6 ;
+            height: 175px;
+            width: 100%;
+            margin-bottom: 25px;
+            .btn {
+                @include standardButton();
+                @include purpleButton();
+                
+            }
+        }
+    
+    
+    nav {
+        background-color: $colorWhite;
+        }
+       
+    
+        .nav-options {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            width: 80%;
+            z-index: 1; 
+            padding-bottom: 30px;
+            margin-left: 10%;
+           
+            .btn {
+                @include standardButton();
+                .number {
+                    @include numberPosition();
+                }
+                .icone {
+                    margin-right: 15px;
+                }
+                @include buttonShadow()
+            }
+            .icone :hover{
+                color:$functionningPurple;   
+            }
+        }
+    
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .restaurant-org {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0% 5% 0% 5%;
+        
+        a {
+            text-decoration: none;
+            width: 45%;
+      
+        .card {
+        height: 280px;
+        position: relative;
+        margin: 0px 15px 0px 15px;
+    
+            .card-badge {
+                background-color: #99e2d0;
+                color: #1b6150;
+                padding: 8px;
+                border-radius: 2px;
+                position: absolute;
+                top: 16px;
+                right: 12px;
+            }
+            
+            .upside-block img {
+                width: 100% ;
+                height: 161px;
+                border-radius: 20px 20px 0px 0px ;
+                object-fit: cover; 
+            }
+    
+            .downside-block {
+                display: flex;
+                align-items: center;
+                height: 80px;
+                padding-left: 10px;
+                border-radius: 0px 0px 20px 20px;
+                background-color: white;
+    
+                .card-footer {
+                    width: 80% ;
+                    h3,p {
+                        margin:0;
+                        margin-bottom: 5px;
+                        color: black;
+                    }
+        
+                }
+                .heart {
+                    font-size: 1.5em;
+                    color: black;
+                }
+            }
+    
+        }
+        }
+    }
+    footer {
+        background-color: $footerDarkGrey;
+        display: flex;
+        justify-content: flex-end;
+        .footer-title {
+            color: $colorWhite;
+            font-family: 'Shrikhand', serif;
+            margin: 0
+        }
+        .footer-org {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: flex-end;
+            width: 585px;
+            height: 80px;
+            padding-right: 50px;
+            margin-top: 0px;
+            padding-bottom: 25px;
+            a {
+                color: $colorWhite;
+                text-decoration: none ;
+    
+            }
+        }
+        }
+    
+    }

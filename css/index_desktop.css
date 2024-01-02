@@ -1,3 +1,176 @@
+@charset "UTF-8";
+@media (min-width: 767px) {
+  /* Définition des variables */
+  /*Définition des mixins*/
+  h1 h2 h3 {
+    font-family: 'Shrikhand', serif;
+    margin: 0; }
 
+  h2 {
+    margin: 0;
+    padding: 2% 0% 2% 9%; }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F6F6;
+    margin: 0; }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    header .header-logo {
+      height: 30px;
+      width: 100%;
+      padding: 6px 0px 6px 0px;
+      object-fit: contain;
+      box-shadow: 0px 3px 2px #7E7E7E36;
+      z-index: 1;
+      background-color: #FFFFFF; }
+    header .header-location {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      background-color: #EAEAEA; }
+
+  .header-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #F6F6F6;
+    height: 175px;
+    width: 100%;
+    margin-bottom: 25px; }
+    .header-description .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 250px;
+      border: none;
+      border-radius: 10px 10px 10px 10px;
+      border-bottom: 30px;
+      position: relative;
+      height: 40px;
+      width: 180px;
+      box-shadow: 1px 1px 9px #7E7E7E;
+      border-radius: 20px 20px 20px 20px;
+      background-color: #686868;
+      background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+      color: #FFFFFF; }
+
+  nav {
+    background-color: #FFFFFF; }
+
+  .nav-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 80%;
+    z-index: 1;
+    padding-bottom: 30px;
+    margin-left: 10%; }
+    .nav-options .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 250px;
+      border: none;
+      border-radius: 10px 10px 10px 10px;
+      border-bottom: 30px;
+      position: relative;
+      box-shadow: 2px 4px 10px #7E7E7E; }
+      .nav-options .btn .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9356DC;
+        height: 24px;
+        width: 24px;
+        border-radius: 100px;
+        color: #FFFFFF;
+        z-index: 1;
+        position: absolute;
+        left: -13px; }
+      .nav-options .btn .icone {
+        margin-right: 15px; }
+    .nav-options .icone :hover {
+      color: #9356DC; }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column; }
+
+  .restaurant-org {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0% 5% 0% 5%; }
+    .restaurant-org a {
+      text-decoration: none;
+      width: 45%; }
+      .restaurant-org a .card {
+        height: 280px;
+        position: relative;
+        margin: 0px 15px 0px 15px; }
+        .restaurant-org a .card .card-badge {
+          background-color: #99e2d0;
+          color: #1b6150;
+          padding: 8px;
+          border-radius: 2px;
+          position: absolute;
+          top: 16px;
+          right: 12px; }
+        .restaurant-org a .card .upside-block img {
+          width: 100%;
+          height: 161px;
+          border-radius: 20px 20px 0px 0px;
+          object-fit: cover; }
+        .restaurant-org a .card .downside-block {
+          display: flex;
+          align-items: center;
+          height: 80px;
+          padding-left: 10px;
+          border-radius: 0px 0px 20px 20px;
+          background-color: white; }
+          .restaurant-org a .card .downside-block .card-footer {
+            width: 80%; }
+            .restaurant-org a .card .downside-block .card-footer h3, .restaurant-org a .card .downside-block .card-footer p {
+              margin: 0;
+              margin-bottom: 5px;
+              color: black; }
+          .restaurant-org a .card .downside-block .heart {
+            font-size: 1.5em;
+            color: black; }
+
+  footer {
+    background-color: #353535;
+    display: flex;
+    justify-content: flex-end; }
+    footer .footer-title {
+      color: #FFFFFF;
+      font-family: 'Shrikhand', serif;
+      margin: 0; }
+    footer .footer-org {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: flex-end;
+      width: 585px;
+      height: 80px;
+      padding-right: 50px;
+      margin-top: 0px;
+      padding-bottom: 25px; }
+      footer .footer-org a {
+        color: #FFFFFF;
+        text-decoration: none; } }
 
 /*# sourceMappingURL=index_desktop.css.map */
