@@ -8,6 +8,7 @@ $badgeGreenDark: #008766;
 $colorWhite:#FFFFFF;
 
 /*Définition des mixins*/
+
 @mixin standardButton {
     display: flex;
     justify-content: center;
@@ -25,12 +26,13 @@ $colorWhite:#FFFFFF;
 @mixin purpleButton {
     height: 40px;
     width: 180px;
-    box-shadow: 1px 1px 9px #7E7E7E;
+    box-shadow: 0px 1px 6px #7E7E7E;
     border-radius: 20px 20px 20px 20px ;
     background-color: #686868;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    background: linear-gradient(0deg,rgba(153,86,220,1),rgba(255,121,218,1));
     color: $colorWhite;
 }
+
 @mixin numberPosition {
     display: flex;
     justify-content: center;
@@ -40,7 +42,6 @@ $colorWhite:#FFFFFF;
     width: 24px;
     border-radius: 100px;
     color: $colorWhite;
-    z-index: 1 ;
     position: absolute;
     left: -13px;
 }
@@ -49,19 +50,36 @@ $colorWhite:#FFFFFF;
     position: relative;
     margin: 0px 15px 0px 15px;
 }
+@mixin favoriteRestaurant {
+    position: absolute;
+    font-size: 10px;
+    right: 13px;
+    bottom: 10px;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(rgba(153,86,220,1),rgba(255,121,218,1));
+    opacity: 0;
+    transition: transform 200ms;
+    &:hover {
+    opacity: 1;
+    transform: scale(2.9);
+    }
+}
 
 
 h1 h2 h3 {
-    font-family: 'Shrikhand', serif;
-    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+  
 }
 h2 { 
-    padding-left: 5%; 
+    margin: 0;
+    padding: 40px 0% 10px 20px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: $backgroundGrey;
+    background-color:$backgroundGrey;
     margin:0
 }
 header{
@@ -73,11 +91,15 @@ header{
     .header-logo {
         height: 30px;
         width: 100%;
-        padding: 6px 0px 6px 0px ;
+        padding: 9px 0px 9px 0px ;
         object-fit: contain;
         box-shadow:0px 3px 2px #7E7E7E36 ; 
-        z-index: 1; 
         background-color: $colorWhite;
+        position: fixed;
+        top: 0;
+        margin-top: -4px;
+        z-index: 1;
+
     }
     .header-location {
         display: flex;
@@ -86,6 +108,7 @@ header{
         gap: 10px;
         align-items: center;
         background-color:#EAEAEA;
+        margin-top: 45px;
         }
     }
     .header-description {
@@ -93,9 +116,11 @@ header{
         flex-direction: column;
         text-align: center;
         align-items: center;
+        justify-content: center;
         background-color: #F6F6F6 ;
         height: 280px;
         width: 80%;
+      
         .btn {
             @include standardButton();
             @include purpleButton();
@@ -119,6 +144,7 @@ nav {
         width: 100%;
         z-index: 1; 
         padding-bottom: 30px;
+        margin-top: -10px;
        
         .btn {
             @include standardButton();
@@ -191,7 +217,14 @@ nav {
             .heart {
                 font-size: 1.5em;
                 color: black;
+                border: none;
+                background-color: $colorWhite;
+                position: relative;
+                .fa-solid {
+                    @include favoriteRestaurant()
+                }
             }
+
         }
 
     }
@@ -202,13 +235,13 @@ footer {
     .footer-title {
         color: $colorWhite;
         font-family: 'Shrikhand', serif;
-        padding: 15px 0px 0px 15px;
+        margin: 0;
     }
     .footer-org {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 100px;
+        height: 162px;
         background-color: #353535;
         color: white;
         padding-left: 10px;
@@ -218,7 +251,6 @@ footer {
         a {
             color: $colorWhite;
             text-decoration: none ;
-
         }
     }
     }
