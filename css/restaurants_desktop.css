@@ -71,7 +71,7 @@
       flex-direction: column;
       justify-content: space-between;
       position: relative;
-      margin: 0% 10%; }
+      margin: 0%; }
       .restaurant .menu-entree .underline {
         width: 50px;
         height: 4px;
@@ -169,11 +169,13 @@
     background-color: #353535;
     display: flex;
     justify-content: flex-end;
-    height: 180px; }
+    height: 115px;
+    margin-top: -31px; }
     footer .footer-title {
       color: #FFFFFF;
       font-family: 'Shrikhand', serif;
-      margin: 0; }
+      margin: 0;
+      order: 5; }
     footer .footer-org {
       display: flex;
       justify-content: space-between;

@@ -14,6 +14,36 @@
     background-color: #F6F6F6;
     margin: 0; }
 
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 2;
+    opacity: 0.9;
+    animation: vanishing 300ms 3s forwards; }
+    .loader::after {
+      content: "";
+      border-top: 5px solid #9356DC;
+      border-right: 5px solid #008766;
+      border-left: 5px solid #FF79DA;
+      border-bottom: 5px solid #99E2D0;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      animation: spin 3s; }
+
+  @keyframes vanishing {
+    0% {
+      transform: scale(1); }
+    100% {
+      transform: scale(0); } }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg); } }
   header {
     display: flex;
     flex-direction: column;

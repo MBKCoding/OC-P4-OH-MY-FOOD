@@ -85,7 +85,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative; }
+      position: relative;
+      animation: appear 1.5s; }
       .restaurant .menu-entree .underline {
         width: 50px;
         height: 4px;
@@ -95,7 +96,7 @@
         left: 10px; }
       .restaurant .menu-entree h2 {
         padding-left: 10px;
-        font-size: 1em; }
+        font-size: 1.2em; }
       .restaurant .menu-entree .dishes {
         display: flex;
         height: 60px;
@@ -104,34 +105,65 @@
         border-radius: 10px 10px 10px 10px;
         border-bottom: 30px;
         background-color: white;
-        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1); }
+        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden; }
         .restaurant .menu-entree .dishes .dishes-description {
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding-left: 10px;
-          width: 85%; }
+          width: 85%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
           .restaurant .menu-entree .dishes .dishes-description h3 {
-            margin: 0px 0px 0px 0px; }
+            margin: 0px 0px 0px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
           .restaurant .menu-entree .dishes .dishes-description p {
-            margin: 2px 0px 0px 0px; }
-    .restaurant .menu {
+            margin: 2px 0px 0px 0px;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+        .restaurant .menu-entree .dishes .dishes-price {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          font-weight: bold;
+          width: 130px;
+          padding-right: 30px; }
+        .restaurant .menu-entree .dishes:hover .dishes-checkbox {
+          transition: 500ms;
+          margin-right: 0px; }
+        .restaurant .menu-entree .dishes .dishes-checkbox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #99E2D0;
+          width: 75px;
+          border-radius: 0% 15% 15% 0%;
+          margin-right: -90px; }
+          .restaurant .menu-entree .dishes .dishes-checkbox i {
+            font-size: 25px;
+            color: #FFFFFF; }
+    .restaurant .menu-e, .restaurant .menu-p, .restaurant .menu-d {
       height: 265px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative; }
-      .restaurant .menu .underline {
+      position: relative;
+      animation: appear 1s; }
+      .restaurant .menu-e .underline, .restaurant .menu-p .underline, .restaurant .menu-d .underline {
         width: 50px;
         height: 4px;
         background-color: #99e2d0;
         position: absolute;
         top: 40px;
         left: 10px; }
-      .restaurant .menu h2 {
+      .restaurant .menu-e h2, .restaurant .menu-p h2, .restaurant .menu-d h2 {
         padding-left: 10px;
         font-size: 1.2em; }
-      .restaurant .menu .dishes {
+      .restaurant .menu-e .dishes, .restaurant .menu-p .dishes, .restaurant .menu-d .dishes {
         display: flex;
         height: 60px;
         width: 100%;
@@ -139,17 +171,61 @@
         border-radius: 10px 10px 10px 10px;
         border-bottom: 30px;
         background-color: white;
-        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1); }
-        .restaurant .menu .dishes .dishes-description {
+        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden; }
+        .restaurant .menu-e .dishes .dishes-description, .restaurant .menu-p .dishes .dishes-description, .restaurant .menu-d .dishes .dishes-description {
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding-left: 10px;
-          width: 85%; }
-          .restaurant .menu .dishes .dishes-description h3 {
-            margin: 0px 0px 0px 0px; }
-          .restaurant .menu .dishes .dishes-description p {
-            margin: 2px 0px 0px 0px; }
+          width: 85%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+          .restaurant .menu-e .dishes .dishes-description h3, .restaurant .menu-p .dishes .dishes-description h3, .restaurant .menu-d .dishes .dishes-description h3 {
+            margin: 0px 0px 0px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
+          .restaurant .menu-e .dishes .dishes-description p, .restaurant .menu-p .dishes .dishes-description p, .restaurant .menu-d .dishes .dishes-description p {
+            margin: 2px 0px 0px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
+        .restaurant .menu-e .dishes .dishes-price, .restaurant .menu-p .dishes .dishes-price, .restaurant .menu-d .dishes .dishes-price {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          font-weight: bold;
+          width: 130px;
+          padding-right: 30px; }
+        .restaurant .menu-e .dishes:hover .dishes-checkbox, .restaurant .menu-p .dishes:hover .dishes-checkbox, .restaurant .menu-d .dishes:hover .dishes-checkbox {
+          transition: 500ms;
+          margin-right: 0px; }
+        .restaurant .menu-e .dishes .dishes-checkbox, .restaurant .menu-p .dishes .dishes-checkbox, .restaurant .menu-d .dishes .dishes-checkbox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #99E2D0;
+          width: 75px;
+          border-radius: 0% 15% 15% 0%;
+          margin-right: -90px; }
+          .restaurant .menu-e .dishes .dishes-checkbox i, .restaurant .menu-p .dishes .dishes-checkbox i, .restaurant .menu-d .dishes .dishes-checkbox i {
+            font-size: 25px;
+            color: #FFFFFF; }
+    .restaurant .menu-e {
+      animation-delay: 0.2s; }
+    .restaurant .menu-p {
+      animation-delay: 0.4s; }
+    .restaurant .menu-d {
+      animation-delay: 0.7s; }
+  @keyframes appear {
+    0% {
+      transform: translateY(50%);
+      opacity: 0; }
+    100% {
+      transform: translateY(0%);
+      opacity: 1; } }
     .restaurant .order {
       display: flex;
       flex-direction: row;

@@ -138,56 +138,13 @@ header {
         
     }
     .menu-entree {
-        
+    
         height: 335px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-
-        .underline {
-            @include underLine();
-        }
-
-        h2 {
-            padding-left: 10px;
-            font-size: 1em;
-        }
-
-        .dishes{
-            display: flex ;
-            height: 60px;
-            width: 100%;
-            border: none;
-            border-radius: 10px 10px 10px 10px ;
-             border-bottom: 30px;  
-             background-color: white;
-             box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,.1);
-            
-            .dishes-description {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding-left: 10px;
-                width: 85%;
-                h3 {
-                    margin : 0px 0px 0px 0px;
-                }
-                p {
-                    margin : 2px 0px 0px 0px;
-                }
-            }
-        }
-
-
-    }
-    .menu {
-    
-        height: 265px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
+        animation: appear 1.5s;
 
         .underline {
             @include underLine();
@@ -198,32 +155,192 @@ header {
             font-size: 1.2em;
         }
 
-        .dishes{
-            display: flex ;
-            height: 60px;
-            width: 100%;
-            border: none;
-            border-radius: 10px 10px 10px 10px ;
-             border-bottom: 30px;  
-             background-color: white;
-             box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,.1);
-            
-            .dishes-description {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding-left: 10px;
-                width: 85%;
-                h3 {
-                    margin : 0px 0px 0px 0px;
+    .dishes{
+
+         display: flex ;
+         height: 60px;
+         width: 100%;
+         border: none;
+         border-radius: 10px 10px 10px 10px ;
+         border-bottom: 30px;  
+         background-color: white;
+         box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,.1);
+         overflow: hidden;
+           
+        
+         .dishes-description {
+
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             padding-left: 10px;
+             width: 85%;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+             overflow: hidden;
+               
+                    
+             h3 {
+                     margin : 0px 0px 0px 0px;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     overflow: hidden;
+                  
                 }
                 p {
-                    margin : 2px 0px 0px 0px;
+                     margin : 2px 0px 0px 0px;
+                     text-overflow: ellipsis;
+                     overflow: hidden;
+                }
+            }
+            .dishes-price {
+                 display: flex;
+                 justify-content: flex-end;
+                 align-items: center;
+                 font-weight: bold;
+                  width: 130px;
+                 padding-right: 30px;
+                
+        
+            }
+            &:hover {
+              
+                .dishes-checkbox {
+                    transition: 500ms;
+                    margin-right: 0px;
+                }
+            }
+            .dishes-checkbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #99E2D0;
+                width: 75px;
+                border-radius: 0% 15% 15% 0%;
+                margin-right: -90px;
+                
+                i {
+                    font-size: 25px;
+                    color: $colorWhite;
+                }
+          
+
+            }
+        }
+
+    }
+    .menu-e, .menu-p, .menu-d {
+    
+        height: 265px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        animation: appear 1s;
+        
+
+        .underline {
+            @include underLine();
+        }
+
+        h2 {
+            padding-left: 10px;
+            font-size: 1.2em;
+        }
+
+    .dishes{
+
+         display: flex ;
+         height: 60px;
+         width: 100%;
+         border: none;
+         border-radius: 10px 10px 10px 10px ;
+         border-bottom: 30px;  
+         background-color: white;
+         box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,.1);
+         overflow: hidden;
+           
+        
+         .dishes-description {
+
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             padding-left: 10px;
+             width: 85%;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+             overflow: hidden;
+               
+                    
+             h3 {
+                     margin : 0px 0px 0px 0px;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     overflow: hidden;
+                  
+                }
+                p {
+                     margin : 2px 0px 0px 0px;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     overflow: hidden;
+                }
+            }
+            .dishes-price {
+                 display: flex;
+                 justify-content: flex-end;
+                 align-items: center;
+                 font-weight: bold;
+                 width: 130px;
+                 padding-right: 30px;
+                
+        
+            }
+            &:hover {
+              
+                .dishes-checkbox {
+                    transition: 500ms;
+                    margin-right: 0px;
+                }
+            }
+            .dishes-checkbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #99E2D0;
+                width: 75px;
+                border-radius: 0% 15% 15% 0%;
+                margin-right: -90px;
+                
+                i {
+                    font-size: 25px;
+                    color: $colorWhite;
                 }
             }
         }
 
     }
+    .menu-e {
+        animation-delay: 0.2s;
+    }
+    .menu-p {
+        animation-delay: 0.4s;
+    }
+    .menu-d {
+        animation-delay: 0.7s;
+    }
+   @keyframes appear {
+    0%  {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+   }
+  
 
 .order {
     display: flex;
@@ -242,6 +359,7 @@ header {
 footer {
     background-color: $footerDarkGrey;
     height: 180px;
+    
 
     .footer-title {
         color: $colorWhite;

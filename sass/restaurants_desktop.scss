@@ -123,7 +123,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-        margin: 0% 10%;
+        margin: 0%;
         
 
         .underline {
@@ -226,11 +226,14 @@ footer {
     background-color: $footerDarkGrey;
     display: flex;
     justify-content: flex-end;
-    height: 180px;
+    height: 115px;
+    margin-top: -31px;
+
     .footer-title {
         color: $colorWhite;
         font-family: 'Shrikhand', serif;
-        margin: 0
+        margin: 0;
+        order: 5;
     }
     .footer-org {
         display: flex;
