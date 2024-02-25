@@ -96,7 +96,6 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding-left: 10px;
           width: 85%; }
           .restaurant .menu-entree .dishes .dishes-description h3 {
             margin: 0px 0px 0px 0px; }
