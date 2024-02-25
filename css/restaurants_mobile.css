@@ -198,7 +198,7 @@
           align-items: center;
           font-weight: bold;
           width: 130px;
-          padding-right: 30px; }
+          padding-right: 40px; }
         .restaurant .menu-e .dishes:hover .dishes-checkbox, .restaurant .menu-p .dishes:hover .dishes-checkbox, .restaurant .menu-d .dishes:hover .dishes-checkbox {
           transition: 500ms;
           margin-right: 0px; }
